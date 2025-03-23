@@ -83,6 +83,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+let lastScrollY = window.scrollY;
+const addressBar = document.querySelector(".address-bar");
+const stickyHeader = document.querySelector(".sticky-header");
+const addressBarHeight = addressBar.offsetHeight;
 
+// Set initial sticky header position
+stickyHeader.style.top = `${addressBarHeight}px`;
+
+window.addEventListener("scroll", () => {
+    let currentScrollY = window.scrollY;
+
+    if (currentScrollY > 50) {
+        // If scrolled down a bit, hide the address bar
+        addressBar.style.transform = "translateY(-100%)";
+        stickyHeader.style.top = "0";
+    } else {
+        // If scrolled all the way back up, show the address bar
+        addressBar.style.transform = "translateY(0)";
+        stickyHeader.style.top = `${addressBarHeight}px`;
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+        question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+
+            // Toggle answer visibility
+            if (answer.style.display === "block") {
+                answer.style.display = "none"; // Close if already open
+            } else {
+                answer.style.display = "block"; // Open if closed
+            }
+        });
+    });
+});
 
 
