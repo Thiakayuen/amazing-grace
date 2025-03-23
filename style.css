@@ -1058,7 +1058,7 @@ footer {
 .faqs-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: gray;
     color: white;
     width: 100%;
 }
@@ -1070,11 +1070,11 @@ footer {
 }
 
 .faq {
-    background: rgba(255, 255, 255, 0.1);
+    background: darkblue;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid black;
 }
 
 .faq-question {
