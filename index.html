@@ -22,7 +22,7 @@
     <meta name="google-site-verification" content="gUVnkhGfsipgXSlMpKO1IBY78pAiS46PZYH4HhW3BF0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We build for the future</title>
+    <title>Amonto Girls' Academy - Juba</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -38,7 +38,7 @@
 
     <header class="sticky-header">
         <div class="logo-container">
-            <a href="#home"><img src="amontologo.jpg" alt="School Logo">
+            <a href="#home" onclick="changeTitle('Home')"><img src="amontologo.jpg" alt="School Logo">
             </a>
             <div class="school-info">
                 <h1 class="school-name">Amonto Girls' Academy - Juba</h1>
@@ -47,11 +47,11 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-school">About us</a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#co-curricular">Co-curricular</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#home" onclick="changeTitle('Home')">Home</a></li>
+                <li><a href="#about-us" onclick="changeTitle('About us')">About us</a></li>
+                <li><a href="#academics" onclick="changeTitle('Academics')">Academics</a></li>
+                <li><a href="#co-curricular" onclick="changeTitle('Co-curricular')">Co-curricular</a></li>
+                <li><a href="#contact-us" onclick="changeTitle('Contact us')">Contact us</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Search...">
                     <button type="submit">🔍</button>
@@ -61,33 +61,16 @@
     </header>
 
     <main id="home">
-        <section class="hero-slider">
-            <div class="slide">
-                <img src="amontogirls.jpg" alt="Girls in squad">
-                <div class="overlay-text">
-                    <h1>Welcome to Amonto Girls' Secondary School</h1>
-                    <p>We build for the future</p>
-                    <a href="#about" class="learn-more-btn">Learn more</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="amontosoccer.jpg" alt="Girls playing soccer">
-                <div class="overlay-text">
-                    <h1>Discover Our Academic Excellence</h1>
-                    <p>We nurture talent and ambition</p>
-                    <a href="#about" class="learn-more-btn">Learn more</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="amontojournalism.jpg" alt="journalism team">
-                <div class="overlay-text">
-                    <h1>Join a Community of yound and passionate talents</h1>
-                    <p>Education that shapes success</p>
-                    <a href="#about" class="learn-more-btn">Learn more</a>
-                </div>
-            </div>
-        </section>
-        
+
+    <section class="video-section">
+        <video class="background-video" autoplay muted loop plays-inline>
+          <source src="schoolvideo.mp4" type="video/mp4">
+          <source src="schoolvideo.mp4" type="video/webm">
+          <img src="bitifulamonogirls.jpg" alt="Background Image">
+          Your browser does not support the video tag.
+        </video>
+    </section>
+
     </main>
     
     <section class="mission-vision">
@@ -108,12 +91,12 @@
                 <h2>Welcome note from our headmaster</h2>
                 <p>Welcome to Amonto Girls High, where excellence meets opportunity. We strive to provide an environment where every student can achieve her dreams.</p>
     
-                <a href="#about" class="learn-more-btn">Read More</a>
+                <a href="#about-us" class="learn-more-btn">Read More</a>
             </div>
         </div>
     </section>
     
-    <section class="about-school" id="about-school">
+    <section class="about-us" id="about-us">
         <h2>📖 Background &amp; History</h2>
 
         <p>Amonto Girls' was founded in 2023 as a dream of implementing thousands of girl children in South Sudan. It is the only girls' boarding school with a conducive environment for learning. The name <strong>Amonto</strong> was carefully selected to reflect the identity and uniqueness of access to education for the rural girl-child as envisioned by Mr. Nobel.
@@ -390,7 +373,7 @@
     </section>
     
     
-    <section id="contact" class="contact-us">
+    <section id="contact-us" class="contact-us">
         <div class="contact-container">
             <h2>Contact Us</h2>
             <form id="contactForm">

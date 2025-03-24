@@ -1,25 +1,4 @@
 
-// This script is used to change the image on the home page every 4 seconds.
-
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? '1' : '0';
-    });
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
-
-setInterval(nextSlide, 4000); // Change image every 4 seconds
-showSlide(currentIndex);
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const testimonials = document.querySelectorAll(".testimonial");
     let index = 0;
@@ -127,3 +106,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function changeTitle(page) {
+  document.title = page + " | Amonto Girls' Academy";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    changeTitle("Home");
+  });
+
+  let scrollTimeout;
+
+// Detect when scrolling stops
+window.addEventListener("scroll", function () {
+  clearTimeout(scrollTimeout);
+
+  scrollTimeout = setTimeout(() => {
+    let sections = document.querySelectorAll("section");
+    let windowHeight = window.innerHeight;
+    
+    sections.forEach((section) => {
+      let rect = section.getBoundingClientRect();
+      
+      // Only update title if the section is fully visible
+      if (rect.top >= 0 && rect.bottom <= windowHeight) {
+        let pageTitle = section.getAttribute("id").replace("-", " ");
+        changeTitle(pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1));
+      }
+    });
+  }, 200); // Waits for scrolling to stop (200ms delay)
+});
+
+  
+  
+
+document.addEventListener("DOMContentLoaded", function () {
+    let video = document.querySelector(".background-video");
+    
+    video.play().catch(error => {
+      console.log("Autoplay failed, requiring user interaction", error);
+    });
+  });
+  
