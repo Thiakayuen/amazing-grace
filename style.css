@@ -134,7 +134,7 @@ img, video {
     align-items: center;
     justify-content: center;
     background-color: white;
-    gap: 20px;
+    gap: 20px; 
     padding: 15px 20px;
     padding: 0;
     margin: 0;
@@ -214,20 +214,26 @@ img, video {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: white;
   }
   
   .background-video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      background: black;
+      background: white;
     }
 
-    @media(mid-width: 768px) {
+    @media (max-width: 768px) {
+        .video-section {
+            height: 50vh; 
+        }
+
         .background-video {
-            height: auto;
-            background-color: white;
+            background: white;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
         }
     }
 
@@ -236,9 +242,31 @@ img, video {
 .mission-vision {
     display: flex;
     align-items: center; 
+    text-align: center;
     justify-content: center;
     padding: 50px;
     background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .mission-vision {
+        padding: 0;
+        margin: 10px;
+    }
+    .content-container {
+        padding: 0;
+        margin: 0;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .content-container .text-container {
+        padding: 0;
+        margin: 0;
+    }
+    .text-container h2 {
+        font-size: 16px;
+        text-align: center;
+    }
 }
 
 .content-container {
@@ -288,16 +316,6 @@ img, video {
 
 .learn-more-btn:hover {
     background-color: darkblue;
-}
-
-@media (max-width: 768px) {
-    .mission-vision {
-      padding: 20px;
-    }
-  .content-container {
-      flex-direction: column-reverse;
-      gap: 20px;
-  }
 }
 
 
@@ -350,6 +368,45 @@ img, video {
     margin: auto;
 }
 
+.scholarship-application {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .scholarship-section {
+        padding: 0;
+        margin: 0;
+        background-color: white;
+    }
+    .scholarship-container {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .scholarship-container .scholarship-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .scholarship-container .scholarship-eligibility {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.scholarship-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eef5f9;
+    border-bottom: 2px solid #ccc;
+}
+
 .scholarship-details, .scholarship-eligibility {
     width: 45%;
     min-width: 300px;
@@ -357,6 +414,19 @@ img, video {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-titl {
+    font-size: 28px;
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+.section-subtitl {
+    font-size: 18px;
+    color: darkblue;
+    margin-bottom: 30px;
 }
 
 .scholarship-details h3, .scholarship-eligibility h3, .scholarship-application h3 {
@@ -377,36 +447,6 @@ img, video {
 
 .scholarship-application p strong {
     color: darkblue;
-}
-
-.scholarship-application {
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.scholarship-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #eef5f9;
-    border-bottom: 2px solid #ccc;
-}
-
-.section-titl {
-    font-size: 28px;
-    font-weight: bold;
-    color: darkblue;
-    margin-bottom: 10px;
-}
-
-.section-subtitl {
-    font-size: 18px;
-    color: darkblue;
-    margin-bottom: 30px;
 }
 
 .scholarship-link {
@@ -462,6 +502,41 @@ img, video {
     font-size: 18px;
     color: white;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .admission-process {
+        text-align: center;
+        background-color: darkblue;
+       width: 100%; 
+       padding: 20px 10px;
+       margin: 0;
+    }
+
+    .admission-container {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        background-color: darkblue;
+        display: block;
+        width: 100%;
+    }
+
+    .admission-container .eligibility {
+        width: 100%;
+        padding: 10px 20px; 
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .admission-container .steps {
+        width: 100%;
+        padding-top: 10px; 
+        margin-top: 20px;
+        border-radius: 0;
+        box-shadow: none; 
+    }
 }
 
 .admission-container {
@@ -621,24 +696,14 @@ img, video {
     color: White;
 }
 
-@media (max-width: 768px) {
-    .activity-slider {
-        display: block;
-        width: 10%;
-        position: fixed;
-    }  
-    .activity-track {
-        animation: none !important;
-    }
-    .activity-card {
-        display: block;
-    }
-}
 
-.section-subheading {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: white;
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .activity-slider {
@@ -650,9 +715,30 @@ img, video {
 }
 
 .activity-track {
+    display: flex;
+    width: max-content; 
     animation: scrollLoop 15s linear infinite;
-    width: 100%; 
-    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .activity-slider {
+        display: block;
+        width: 100%;
+        position: fixed;
+    }  
+    .activity-track {
+        animation: none !important;
+        width: 100%; 
+    }
+    .activity-card {
+        display: block;
+    }
+}
+
+.section-subheading {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .activity-card {
@@ -704,7 +790,8 @@ img, video {
     .news-container {
         width: 100%;
         display: flex;
-        padding: 0px;
+        padding: 10px;
+        margin: 0;
         background-color: white;
         color: darkblue;
     }
@@ -718,37 +805,7 @@ img, video {
     gap: 20px;
     margin-top: 20px;
 }
-/*
-.news-item {
-    background: darkblue;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 30%;
-    min-width: 280px;
-}
 
-.news-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 15px;
-}
-
-.news-content h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: darkblue;
-}
-
-.news-content p {
-    font-size: 14px;
-    color: darkblue;
-}
-*/
 .read-more {
     display: inline-block;
     margin-top: 10px;
@@ -1149,19 +1206,18 @@ footer {
     }
 
     /* Hamburger & Close Icon */
-    .menu-toggle {
+.menu-toggle {
         cursor: pointer;
         width: 30px;
         height: 30px;
     }
+    
 
     .menu-toggle img {
         width: 30px;
         height: 30px;
-        /*display: block;*/
     }
 
-    /* Hide the X icon by default */
     .close-icon {
         display: none;
     }
@@ -1244,3 +1300,5 @@ footer {
         gap: 10px;
     }
 }
+
+
