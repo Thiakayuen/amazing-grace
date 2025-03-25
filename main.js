@@ -136,8 +136,7 @@ window.addEventListener("scroll", function () {
   }, 200); // Waits for scrolling to stop (200ms delay)
 });
 
-  
-  
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let video = document.querySelector(".background-video");
@@ -147,3 +146,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+/*
+  document.getElementById('mobile-menu').addEventListener("click",()=>{
+    document.getElementById('nav-menu').classList.toggle("active")
+  }) */
+
+
+
+    function toggleMenu() {
+        let navDrawer = document.getElementById("navDrawer");
+        let menuIcon = document.querySelector(".menu-icon");
+        let closeIcon = document.querySelector(".close-icon");
+    
+        if (navDrawer.classList.contains("active")) {
+            navDrawer.classList.remove("active");
+            menuIcon.style.display = "block";
+            closeIcon.style.display = "none";
+        } else {
+            navDrawer.classList.add("active");
+            menuIcon.style.display = "none";
+            closeIcon.style.display = "block";
+        }
+    }
+    

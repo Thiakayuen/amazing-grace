@@ -28,25 +28,46 @@
 </head>
 
 <body>
-
     <div class="address-bar">
-        <p>📍 Jebel Amianin, Juba, South Sudan</p>
-        <p>📞 Phone: <a href="tel:+211923666022">+211 923 666 022</a></p>
-        <p>✉ Email: <a href="mailto:amontogirlsacademy2024@gmail.com">amontogirlsacademy2024@gmail.com</a></p>
-        <p>⏰ Mon - Fri 8.00am - 6.00pm</p>
-    </div>    
-
+        <div class="scrolling-content">
+            <p>📍 Jebel Amianin, Juba, South Sudan</p>
+            <p>📞 Phone: <a href="tel:+211923666022">+211 923 666 022</a></p>
+            <p>✉ Email: <a href="mailto:amontogirlsacademy2024@gmail.com">amontogirlsacademy2024@gmail.com</a></p>
+            <p>⏰ Mon - Fri 8.00am - 6.00pm</p>
+        </div>
+    </div>
     <header class="sticky-header">
         <div class="logo-container">
             <a href="#home" onclick="changeTitle('Home')"><img src="amontologo.jpg" alt="School Logo">
             </a>
             <div class="school-info">
-                <h1 class="school-name">Amonto Girls' Academy - Juba</h1>
+                <h1 class="school-name desktop">Amonto Girls - Juba</h1>
                 <p class="motto">"We build for the future"</p>
             </div>
         </div>
+
+        <!-- Mobile Header with Hamburger Menu -->
+        <div class="mobile-header">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <img src="menu-outline.svg" alt="Menu" class="menu-icon"> 
+                <img src="close-outline.svg" alt="Close" class="close-icon"> 
+            </div>
+        </div>
+
+        <!-- Navigation Drawer (Below Address Bar) -->
+        <div class="nav-drawer" id="navDrawer">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" onclick="changeTitle('Home')">Home</a></li>
+                <li><a href="#about-us" onclick="changeTitle('About us')">About us</a></li>
+                <li><a href="#academics" onclick="changeTitle('Academics')">Academics</a></li>
+                <li><a href="#co-curricular" onclick="changeTitle('Co-curricular')">Co-curricular</a></li>
+                <li><a href="#contact-us" onclick="changeTitle('Contact us')">Contact us</a></li>
+            </ul>
+        </div>
+
+        <!-- Navigation links-->
         <nav>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" onclick="changeTitle('Home')">Home</a></li>
                 <li><a href="#about-us" onclick="changeTitle('About us')">About us</a></li>
                 <li><a href="#academics" onclick="changeTitle('Academics')">Academics</a></li>
@@ -382,11 +403,11 @@
                 <div class="contact-row">
                     <div>
                         <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" required>
+                        <input type="text" id="fullname" name="fullname" placeholder="Thiak Ayuen" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="ayuenthiak@gmail.com" required>
                     </div>
               </div>
     
@@ -426,7 +447,7 @@
             <!-- Connect With Us (Social Media Links) -->
             <div class="footer-section">
                 <h3>🔗 Follow Us </h3>
-                <p><a href="https://www.facebook.com/profile.php?id=61550269624961" target="_blank" rel="noopener">🌍 Facebook</a></p>
+                <p><a href="https://www.facebook.com/profile.php?id=61550269624961" target="_blank" rel="noopener"> <img src="logo-facebook.svg" alt=""> Facebook</a></p>
                 <p><a href="https://www.facebook.com/profile.php?id=61550269624961" target="_blank" rel="noopener">📷 Instagram</a></p>
                 <p><a href="https://www.facebook.com/profile.php?id=61550269624961" target="_blank" rel="noopener">🐦 Twitter</a></p>
             </div>
