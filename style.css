@@ -1237,7 +1237,7 @@ footer {
         justify-content: flex-end;
         align-items: center;
         padding: 15px 20px;
-        position: fixed;
+        /* position: fixed; */
         top: 50px;
         width: 100%;
         z-index: 1100;
