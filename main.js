@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function changeTitle(page) {
-  document.title = page + " | Amonto Girls' Academy";
+  document.title = page + " | Amazing Grace";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
