@@ -673,18 +673,18 @@ img, video {
 .activity-list {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between activity cards */
+    gap: 10px; 
 }
 
 .activity-card {
-    width: 100%; /* Full width */
+    width: 100%;
     background: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 10px 0; /* 10px margin above and below */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin: 10px 0; 
+    box-sizing: border-box; 
 }
 
 .section-h, .section-s {
@@ -694,7 +694,7 @@ img, video {
 
 .activity-img {
     width: 100%;
-    height: auto;
+    height: 1/2;
     border-radius: 8px;
     margin-bottom: 10px;
 }
